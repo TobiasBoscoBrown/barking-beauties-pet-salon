@@ -33,7 +33,7 @@ tailwind.config = {
 }
 </script>
 <style>
-  html{scroll-behavior:smooth} body{font-family:'Nunito Sans',system-ui,sans-serif}
+  html,body{overflow-x:hidden;max-width:100%} html{scroll-behavior:smooth} body{font-family:'Nunito Sans',system-ui,sans-serif}
   .stars svg{width:1em;height:1em;display:inline-block;color:#c79a3c;vertical-align:-.08em}
   .marquee{display:flex;gap:2.5rem;white-space:nowrap;animation:scroll 28s linear infinite}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -52,11 +52,11 @@ tailwind.config = {
 
 <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur border-b border-line">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-    <a href="index.html" class="flex items-center gap-2 shrink-0">
-      <span class="w-9 h-9 rounded-full bg-plum text-cream flex items-center justify-center">
+    <a href="index.html" class="flex items-center gap-2 min-w-0">
+      <span class="w-9 h-9 shrink-0 rounded-full bg-plum text-cream flex items-center justify-center">
         <span class="w-5 h-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="11" r="2"/><circle cx="10" cy="6.5" r="2"/><circle cx="14" cy="6.5" r="2"/><circle cx="18" cy="11" r="2"/><path d="M8.5 16.5c1.2-2 2-3 3.5-3s2.3 1 3.5 3c1 1.7-.4 3.5-2.2 3.2-1-.2-1.6-.2-2.6 0-1.8.3-3.2-1.5-2.2-3.2Z"/></svg></span>
       </span>
-      <span class="font-display text-[19px] sm:text-xl font-700 text-plum-deep leading-none">Barking Beauties<span class="hidden sm:inline text-muted font-sans font-600 text-[11px] align-middle ml-2 tracking-wide uppercase">Pet Salon &amp; Wellness</span></span>
+      <span class="font-display text-[18px] sm:text-xl font-700 text-plum-deep leading-none truncate">Barking Beauties<span class="hidden sm:inline text-muted font-sans font-600 text-[11px] align-middle ml-2 tracking-wide uppercase">Pet Salon &amp; Wellness</span></span>
     </a>
     <nav class="hidden md:flex items-center gap-7 text-[15px] font-600">
       <a href="index.html" data-nav class="hover:text-plum transition">Home</a>
@@ -65,9 +65,9 @@ tailwind.config = {
       <a href="index.html#reviews" class="hover:text-plum transition">Reviews</a>
       <a href="blog.html" data-nav class="hover:text-plum transition">Blog</a>
     </nav>
-    <div class="flex items-center gap-2 sm:gap-3">
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
       <a href="tel:+12088138296" class="hidden lg:flex items-center gap-1.5 text-[15px] font-700 text-plum-deep"><span class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg></span>(208) 813-8296</a>
-      <a href="https://www.vagaro.com/barkingbeauties" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-plum hover:bg-plum-deep text-cream text-[14px] font-700 px-4 py-2.5 rounded-full transition shadow-soft"><span class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/></svg></span>Book online</a>
+      <a href="https://www.vagaro.com/barkingbeauties" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-plum hover:bg-plum-deep text-cream text-[13px] sm:text-[14px] font-700 px-3 sm:px-4 py-2.5 rounded-full transition shadow-soft whitespace-nowrap"><span class="w-4 h-4 hidden sm:inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/></svg></span>Book<span class="hidden sm:inline">&nbsp;online</span></a>
       <button id="navBtn" aria-label="Open menu" class="md:hidden w-10 h-10 -mr-1 flex items-center justify-center rounded-lg border border-line">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
