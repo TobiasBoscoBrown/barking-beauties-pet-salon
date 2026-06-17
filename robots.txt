@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://barking-beauties-pet-salon.vercel.app/sitemap.xml
